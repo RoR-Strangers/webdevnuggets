@@ -15,3 +15,13 @@
 /log/*
 !/log/.keep
 /tmp
+
+#ignore byebug history
+/.byebug_history
+
+#ignore spring 1000
+/spring-1000
+
+#ignore rubocop files
+/1000
+.rubocop*
