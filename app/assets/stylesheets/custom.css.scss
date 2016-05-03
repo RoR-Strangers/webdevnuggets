@@ -1,0 +1,19 @@
+table { 
+  table-layout: fixed; 
+  width: 100%;
+}
+
+td { 
+  width: 33%; 
+}
+
+iframe{
+  border: 2px solid #ddd;
+  height: 500px;
+}
+
+.editor {
+  margin-left: 15px;
+  margin-top: 15px;
+  height: 400px;
+}
