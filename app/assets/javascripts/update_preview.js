@@ -25,6 +25,7 @@ $(document).ready(function() {
   	var iframe = document.getElementById('targetCode');
   	iframe = iframe.contentWindow;
   	iframe.document.open();
+  	iframe.document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>');
   	input_content("html", iframe);
   	iframe.document.write("<style>");
   	input_content("sass", iframe);
