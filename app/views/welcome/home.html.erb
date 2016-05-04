@@ -1,18 +1,22 @@
-<div id="content">
-  <fieldset class="column left">
-    <legend>HTML</legend>
-        <div class="editor" id="html"></div>
-  </fieldset>
-  <fieldset class="column right">
-    <legend>CSS</legend>
-        <div class="editor" id="sass"></div>
-  </fieldset>
-  <fieldset>
-    <legend>JAVASCRIPT</legend>
-        <div class="editor" id="javascript"></div>
-  </fieldset>
-  <fieldset>
-    <legend>View</legend>
-        <iframe id="targetCode" width="100%"></iframe>
-  </fieldset>
+<!--<div class="editor" id="html"></div>-->
+<!--<div class="editor" id="sass"></div>-->
+<!--<div class="editor" id="javascript"></div>-->
+<!--<iframe id="targetCode" width="100%"></iframe>-->
+
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">HTML</a></li>
+  <li role="presentation"><a href="#">CSS</a></li>
+  <li role="presentation"><a href="#">JAVASCRIPT</a></li>
+</ul>
+    
+<div class="container">
+  <div class="row editor-row">
+    <div class="editor" id="html"></div>
+  </div>
+  
+  
+  <div class="row editor-row">
+    <iframe id="targetCode" width="100%"></iframe>
+  </div>
 </div>
+
