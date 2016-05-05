@@ -5,7 +5,7 @@ $(document).ready(function() {
   
   create_editor = function (format) {
     var editor = ace.edit(format);
-    editor.setTheme("ace/theme/clouds");
+    editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/" + format);
     return false;
   };

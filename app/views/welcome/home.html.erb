@@ -2,21 +2,23 @@
 <!--<div class="editor" id="sass"></div>-->
 <!--<div class="editor" id="javascript"></div>-->
 <!--<iframe id="targetCode" width="100%"></iframe>-->
-
-<ul class="nav nav-tabs">
-  <li role="presentation"><a href="#">HTML</a></li>
-  <li role="presentation"><a href="#">CSS</a></li>
-  <li role="presentation"><a href="#">JAVASCRIPT</a></li>
-</ul>
-    
-<div class="container">
+<div class="container-fluid">
   <div class="row editor-row">
-    <div class="editor" id="html"></div>
+    <div class="col-md-4">
+      <div class="editor" id="html"></div>
+    </div>
+    <div class="col-md-4">
+      <div class="editor" id="sass"></div>
+    </div>
+    <div class="col-md-4">
+      <div class="editor" id="javascript"></div>
+    </div>
   </div>
   
   
-  <div class="row editor-row">
-    <iframe id="targetCode" width="100%"></iframe>
+  <div class="row view-row">
+    <div class="col-md-12">
+      <iframe id="targetCode"></iframe>
+    </div>
   </div>
 </div>
-

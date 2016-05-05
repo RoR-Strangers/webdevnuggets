@@ -14,21 +14,24 @@ iframe {
   border: 2px solid #ddd;
   height: 400px;
   text-align: center;
+  width: 1230px;
 }
 
 .editor {
+    border: 2px solid #ddd;
     height: 400px;
+    width: 400px;
 }
 
-.editor-row {
-    height: 50%;
+.view-row {
+    margin-top: 20px;
 }
 
 /*Scrollable content*/
 
 .scroll {
   text-align: center;
-  height:800px;
+  height:830px;
   overflow-y: scroll; 
 }
 
