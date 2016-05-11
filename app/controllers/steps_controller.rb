@@ -1,6 +1,7 @@
 class StepsController < ApplicationController
+  include ApplicationHelper
   before_action :require_admin
-  before_action :set_step, only: [:edit, :update, :show, :destroy]
+  before_action :set_step, only: [:edit, :update, :destroy]
 
   def index
     @steps = Step.all
@@ -23,16 +24,13 @@ class StepsController < ApplicationController
   end
 
   def create
-    @step = step.new(step_params)
+    @step = Step.new(step_params)
     if @step.save
       flash[:success] = "Step was successfully created"
-      redirect_to step_path(@step)
+      redirect_to lesson_path(@step.lesson)
     else
       render 'new'
     end
-  end
-
-  def show
   end
 
   def destroy
@@ -51,4 +49,5 @@ class StepsController < ApplicationController
   def set_step
     @step = step.find(params[:id])
   end
+
 end

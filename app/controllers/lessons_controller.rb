@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+  include ApplicationHelper
   before_action :require_admin, except: [:index, :show]
   before_action :set_lesson, only: [:edit, :update, :show, :destroy]
 
@@ -33,6 +34,10 @@ class LessonsController < ApplicationController
   end
 
   def show
+    if @lesson.current_step.nil?
+      @lesson.current_step = 1
+    end
+    @step = @lesson.step
   end
 
   def destroy
@@ -44,7 +49,7 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-    params.require(:lesson).permit(:title)
+    params.require(:lesson).permit(:title, :current_step)
   end
 
   def set_lesson
