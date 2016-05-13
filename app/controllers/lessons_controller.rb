@@ -32,12 +32,8 @@ class LessonsController < ApplicationController
       render 'new'
     end
   end
-
-  def show
-    if @lesson.current_step.nil?
-      @lesson.current_step = 1
-    end
-    @step = @lesson.step
+  
+  def show 
   end
 
   def destroy

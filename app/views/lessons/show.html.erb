@@ -1,4 +1,5 @@
-<div class="container">
-  <h2><%= @lesson.title %></h2>
-  <%= render 'steps/show' %>
-</div>
+<h2><%= @lesson.title %></h2>
+
+<% @lesson.steps.each do |step| %>
+    <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary'%>
+<% end %>
