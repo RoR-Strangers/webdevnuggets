@@ -1,5 +1,19 @@
-<h2><%= @lesson.title %></h2>
+<h4><%= @lesson.title %></h4>
 
-<% @lesson.steps.each do |step| %>
-    <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary'%>
-<% end %>
+<div class="row">
+  <div class="col-md-2">
+    <% @lesson.steps.each do |step| %>
+      <div class="row inject">
+        <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary', remote: true%>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-2">
+    <div id="step-results"></div>
+  </div>
+  
+  <div class="col-md-8">
+    <%= render '/shared/editor' %>
+  </div>
+</div>

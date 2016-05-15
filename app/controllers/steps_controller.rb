@@ -34,6 +34,9 @@ class StepsController < ApplicationController
   end
   
   def show
+    respond_to do |format|
+      format.js { render :show_step }
+    end
   end
 
   def destroy
