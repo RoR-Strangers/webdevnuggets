@@ -1,7 +1,7 @@
 class StepsController < ApplicationController
   include ApplicationHelper
   before_action :require_admin
-  before_action :set_step, only: [:edit, :update, :destroy]
+  before_action :set_step, only: [:edit, :update, :destroy, :show]
 
   def index
     @steps = Step.all
@@ -32,6 +32,12 @@ class StepsController < ApplicationController
       render 'new'
     end
   end
+  
+  def show
+    respond_to do |format|
+      format.js { render :show_step }
+    end
+  end
 
   def destroy
     @step.destroy
@@ -47,7 +53,7 @@ class StepsController < ApplicationController
   end
 
   def set_step
-    @step = step.find(params[:id])
+    @step = Step.find(params[:id])
   end
 
 end

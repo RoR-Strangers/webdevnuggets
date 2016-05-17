@@ -1,0 +1,13 @@
+$("#step-results").html("<%=escape_javascript(render 'show')%>");
+
+$(document).ready(function() {
+    var htmleditor = ace.edit("html");
+    var csseditor = ace.edit("sass");
+    var javascripteditor = ace.edit("javascript");
+    var htmlcontent = $('#insert').data('html');
+    var csscontent = $('#insert').data('css');
+    var javascriptcontent = $('#insert').data('javascript');
+    htmleditor.insert(htmlcontent);
+    csseditor.insert(csscontent);
+    javascripteditor.insert(javascriptcontent);
+});

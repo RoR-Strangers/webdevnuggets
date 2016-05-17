@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= require_tree .
 //= require ace-rails-ap
 //= require ace/theme-twilight
 //= require ace/mode-javascript
 //= require ace/mode-sass
 //= require ace/mode-html
+//= require update_preview
