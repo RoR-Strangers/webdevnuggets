@@ -16,8 +16,9 @@ class LessonsController < ApplicationController
 
   def update
     if @lesson.update(lesson_params)
+      debugger
       flash[:success] = "Lesson was successfully updated"
-      redirect_to lesson_path(@lesson)
+      redirect_to lesson_path(@lesson.title)
     else
       render 'edit'
     end
@@ -27,7 +28,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     if @lesson.save
       flash[:success] = "Lesson was successfully created"
-      redirect_to lesson_path(@lesson)
+      redirect_to lesson_path(@lesson.title)
     else
       render 'new'
     end
