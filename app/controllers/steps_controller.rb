@@ -17,7 +17,7 @@ class StepsController < ApplicationController
   def update
     if @step.update(step_params)
       flash[:success] = "Step was successfully updated"
-      redirect_to lesson_path(@step.lesson)
+      redirect_to lesson_path(@step.lesson.title)
     else
       render 'edit'
     end
@@ -27,7 +27,7 @@ class StepsController < ApplicationController
     @step = Step.new(step_params)
     if @step.save
       flash[:success] = "Step was successfully created"
-      redirect_to lesson_path(@step.lesson)
+      redirect_to lesson_path(@step.lesson.title)
     else
       render 'new'
     end
@@ -42,7 +42,7 @@ class StepsController < ApplicationController
   def destroy
     @step.destroy
     flash[:danger] = "Step was successfully deleted"
-    redirect_to lesson_path(@step.lesson)
+    redirect_to lesson_path(@step.lesson.title)
   end
 
   private
