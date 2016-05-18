@@ -4,7 +4,8 @@
     <% @lessons.each do |lesson| %>
       <div class="well">
         <h3>
-        <%= link_to lesson.title, lesson_path(lesson) %>
+          <% title = lesson.title.gsub(' ', '-') %>
+          <%= link_to lesson.title, lesson_path(title) %>
         </h3>
         <% if current_user.admin? %>
           <%= link_to "edit", edit_lesson_path(lesson), class: "btn btn-xs btn-primary" %>

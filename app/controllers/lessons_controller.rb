@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   include ApplicationHelper
   before_action :require_admin, except: [:index, :show]
-  before_action :set_lesson, only: [:edit, :update, :show, :destroy]
+  before_action :set_lesson, only: [:edit, :update, :destroy]
 
   def index
     @lessons = Lesson.all
@@ -34,6 +34,8 @@ class LessonsController < ApplicationController
   end
   
   def show 
+    title = params[:title].gsub('-', ' ')
+    @lesson = Lesson.find_by_title(title)
   end
 
   def destroy
