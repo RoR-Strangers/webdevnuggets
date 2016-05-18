@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   get 'lesson/:title', to: 'lessons#show', as: 'lesson'
   resources :lessons, except: [:show]
-  resources :steps
+  resources :steps, except: [:index]
 
   # Example resource route with options:
   #   resources :products do

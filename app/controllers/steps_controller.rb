@@ -1,11 +1,7 @@
 class StepsController < ApplicationController
   include ApplicationHelper
-  before_action :require_admin
+  before_action :require_admin, except: [:show]
   before_action :set_step, only: [:edit, :update, :destroy, :show]
-
-  def index
-    @steps = Step.all
-  end
 
   def new
     @step = Step.new
