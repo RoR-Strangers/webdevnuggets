@@ -1,4 +1,4 @@
 class Lesson < ActiveRecord::Base
-  has_many :steps
+  has_many :steps, dependent: :destroy
   validates :title, presence: true
 end
