@@ -39,7 +39,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
     flash[:danger] = "Lesson was successfully deleted"
-    redirect_to lesson_path
+    redirect_to lessons_path
   end
 
   private
