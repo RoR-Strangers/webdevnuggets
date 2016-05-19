@@ -32,9 +32,9 @@ class LessonsController < ApplicationController
       render 'new'
     end
   end
-  
-  def show 
-    title = params[:title].gsub('-', ' ')
+
+  def show
+    title = params[:title].tr('-', ' ')
     @lesson = Lesson.find_by_title(title)
   end
 

@@ -28,7 +28,7 @@ class StepsController < ApplicationController
       render 'new'
     end
   end
-  
+
   def show
     respond_to do |format|
       format.js { render :show_step }
@@ -51,5 +51,4 @@ class StepsController < ApplicationController
   def set_step
     @step = Step.find(params[:id])
   end
-
 end

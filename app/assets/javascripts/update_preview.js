@@ -1,11 +1,7 @@
 /*global $*/
 /*global ace*/
-var ready = function() {
-  update_preview();
-};
-
-$(document).ready(ready); // to load when going to page directly
-$(document).on('page:load', ready); // to load when coming from link_to
+$(document).ready(update_preview); // to load when going to page directly
+$(document).on('page:load', update_preview); // to load when coming from link_to
 
 function update_preview() {
   var create_editor, update_output, input_content;
@@ -15,7 +11,7 @@ function update_preview() {
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/" + format);
     editor.getSession().on('change', function(e) {
-        update_output();
+      update_output();
     });
     return false;
   };
