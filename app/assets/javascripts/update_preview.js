@@ -14,6 +14,9 @@ function update_preview() {
     var editor = ace.edit(format);
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/" + format);
+    editor.getSession().on('change', function(e) {
+        update_output();
+    });
     return false;
   };
   
@@ -43,8 +46,4 @@ function update_preview() {
   	iframe.document.close();
   	return false;
   };
-
-  $(".editor").keyup(function() {
-     update_output();
-  });
 }
