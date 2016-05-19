@@ -4,7 +4,7 @@
     <% @lessons.each do |lesson| %>
       <div class="well">
         <h3>
-          <% title = lesson.title.gsub(' ', '-') %>
+          <% title = lesson.title.tr(' ', '-') %>
           <%= link_to lesson.title, lesson_path(title) %>
         </h3>
         <% if current_user.admin? %>
