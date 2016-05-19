@@ -1,8 +1,8 @@
 body, html {
   margin: 0;
   overflow: hidden;
-  height: 100%;
-  padding-top: 30px; }
+  padding-top: 25px; 
+}
 
 .navbar {
   margin-bottom: 21px; 
@@ -83,6 +83,7 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
 
 .business-header {
   height: 400px;
+  
 	background: linear-gradient(270deg, #f2b02b, #e14e17, #333333);
 	background-size: 600% 600%;
 	-webkit-animation: Gradient 30s ease infinite;
