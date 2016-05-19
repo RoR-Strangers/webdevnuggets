@@ -21,7 +21,7 @@ function update_preview() {
   };
   
   create_editor("html");
-  create_editor("sass");
+  create_editor("css");
   create_editor("javascript");
   
   input_content = function (format, iframe) {
@@ -38,7 +38,7 @@ function update_preview() {
   	iframe.document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>');
   	input_content("html", iframe);
   	iframe.document.write("<style>");
-  	input_content("sass", iframe);
+  	input_content("css", iframe);
   	iframe.document.write("</style>");
     iframe.document.write("<script>");
   	input_content("javascript", iframe);
