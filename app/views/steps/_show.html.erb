@@ -5,6 +5,7 @@
                                             sass: @step.css,
                                             javascript: @step.javascript} do %>
 <% end %>
+<button class="btn btn-primary btn-lg btn-block" id="solution">Show Solution</button>
 
 <% if current_user.admin? %>
   <%= link_to "edit", edit_step_path(@step, :lesson_id => @step.lesson_id), class: "btn btn-xs btn-primary" %>
