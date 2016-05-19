@@ -16,7 +16,6 @@ class LessonsController < ApplicationController
 
   def update
     if @lesson.update(lesson_params)
-      debugger
       flash[:success] = "Lesson was successfully updated"
       redirect_to lesson_path(@lesson.title)
     else

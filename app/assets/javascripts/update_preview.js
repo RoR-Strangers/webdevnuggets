@@ -1,6 +1,13 @@
 /*global $*/
 /*global ace*/
-$(document).ready(function() {
+var ready = function() {
+  update_preview();
+};
+
+$(document).ready(ready); // to load when going to page directly
+$(document).on('page:load', ready); // to load when coming from link_to
+
+function update_preview() {
   var create_editor, update_output, input_content;
   
   create_editor = function (format) {
@@ -40,4 +47,4 @@ $(document).ready(function() {
   $(".editor").keyup(function() {
      update_output();
   });
-});
+}
