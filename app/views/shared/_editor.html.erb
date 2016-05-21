@@ -14,10 +14,34 @@
     </div>
   </div>
   
-  
   <div class="row view-row">
     <div class="col-md-12">
       <iframe id="targetCode"></iframe> 
     </div>
   </div>
+  <button type="button" id="loadModal" class="btn btn-primary btn-lg" 
+          data-toggle="modal" data-target="#myModal">
+    Open in Resizable Window
+  </button>
 </div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">Resizable Preview</h4>
+      </div>
+      <div class="modal-body">
+        <div id="resizable">
+           <iframe id="modalIframe"></iframe> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
