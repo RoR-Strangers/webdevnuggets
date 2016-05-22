@@ -20,3 +20,5 @@
 //= require ace/mode-css
 //= require ace/mode-html
 //= require update_preview
+//= require jquery-ui/resizable
+//= require jquery-ui/draggable
