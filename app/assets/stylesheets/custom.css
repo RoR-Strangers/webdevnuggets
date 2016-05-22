@@ -10,6 +10,10 @@ body, html {
   padding-right: 0;
 }
 
+.modal-content {
+  display: table;
+}
+
 #modalIframe {
   width: 100%;
   height: 100%;
