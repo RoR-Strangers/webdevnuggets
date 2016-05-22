@@ -124,13 +124,13 @@ iframe {
   border: 2px solid #ddd;
   height: 400px;
   text-align: center;
-  width: 1230px;
+  width: 100%;
 }
 
 .editor {
   border: 2px solid #ddd;
   height: 400px;
-  width: 400px;
+  width: 100%;
 }
 
 .view-row {
@@ -140,7 +140,7 @@ iframe {
 .fancy-bar {
   border: solid;
   overflow: hidden;
-  width: 400px;
+  width: 100%;
 }
 
 

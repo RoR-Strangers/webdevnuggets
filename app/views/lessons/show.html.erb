@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
-      <h2 align="center"><%= @lesson.title %></h2>
+    <div class="col-md-3">
+            <h2 align="center"><%= @lesson.title %></h2>
       <% @lesson.steps.order(:step_number).each do |step| %>
         <div class="">
           <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary', remote: true%>
@@ -10,13 +10,10 @@
       <% if current_user.admin? %>
         <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
       <% end %>
-    </div>
-  
-    <div class="col-md-2">
       <div id="step-results"></div>
     </div>
   
-    <div class="col-md-8">
+    <div class="col-md-9">
       <%= render '/shared/editor' %>
     </div>
   </div>
