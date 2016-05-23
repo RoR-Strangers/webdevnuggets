@@ -21,6 +21,7 @@
 //= require ace/mode-html
 //= require update_preview
 //= require step_dropdown
+//= require show_solution
 //= require jquery-ui/resizable
 //= require jquery-ui/draggable
 //= require greensock/TweenMax

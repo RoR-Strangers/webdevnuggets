@@ -1,6 +1,9 @@
 <div class="container-fluid">
   <div class="col-md-3">
     <h2><%= @lesson.title %></h2>
+    <% if current_user.try(:admin?) %>
+      <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
+    <% end %>
     <div class='step-dropdown'>
       <div class='step-preview'>Select a Step</div>
       <% @lesson.steps.order(:step_number).each do |step| %>
@@ -9,9 +12,6 @@
         <% end %>
       <% end %>
     </div>
-    <% if current_user.try(:admin?) %>
-      <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
-    <% end %>
     <div id="step-results"></div>
   </div>
 
