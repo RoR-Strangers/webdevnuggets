@@ -1,19 +1,30 @@
+<% content_for :index do %>
+
 <section class="Lessons">
-  <div class="container">
-    <h1>Lessons</h1>
-    <% @lessons.each do |lesson| %>
-      <div class="well">
-        <h3>
-          <% title = lesson.title.tr(' ', '-') %>
-          <%= link_to lesson.title, lesson_path(title) %>
-        </h3>
-        <% if current_user.admin? %>
-          <%= link_to "edit", edit_lesson_path(lesson), class: "btn btn-xs btn-primary" %>
-          <%= link_to "delete", lesson_path(lesson), method: :delete, 
-                                data: { confirm: "Are you sure you want to delete?" },
-                                class: "btn btn-xs btn-danger" %>
-        <% end %>
-      </div>
-    <% end %>
+  <div class="container lessons-container">
+    <div class="row">
+      <div class="title-header lessons">Lessons</div>
+      
+      <% @lessons.each do |lesson| %>
+          <div class="thumbnail cards">
+            <h3 class="cards-content">
+              <% title = lesson.title.tr(' ', '-') %>
+              <%= link_to lesson.title, lesson_path(title) %>
+            </h3>
+            <div class="cards-content">
+            <% if current_user.admin? %>
+              <%= link_to "edit", edit_lesson_path(lesson), class: "btn btn-xs btn-primary" %>
+              <%= link_to "delete", lesson_path(lesson), method: :delete, 
+                                    data: { confirm: "Are you sure you want to delete?" },
+                                    class: "btn btn-xs btn-danger" %>
+            <% end %>
+            </div>
+          </div>
+      <% end %>
+      
+    </div>
   </div>
-</div>
+</section>
+
+
+<% end %>
