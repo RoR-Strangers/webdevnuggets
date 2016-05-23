@@ -8,8 +8,7 @@
         </div>
       <% end %>
       <% if current_user.try(:admin?) %>
-      <% if !current_user.nil? and current_user.admin? %>
-        <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
+      <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
       <% end %>
       <div id="step-results"></div>
     </div>
