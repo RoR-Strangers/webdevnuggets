@@ -7,7 +7,7 @@
           <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary', remote: true%>
         </div>
       <% end %>
-      <% if current_user.admin? %>
+      <% if !current_user.nil? and current_user.admin? %>
         <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
       <% end %>
       <div id="step-results"></div>
