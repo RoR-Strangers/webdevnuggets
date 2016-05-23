@@ -1,20 +1,21 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3">
-            <h2 align="center"><%= @lesson.title %></h2>
+  <div class="col-md-3">
+    <h2><%= @lesson.title %></h2>
+    <div class='step-dropdown'>
+      <div class='step-preview'>Select a Step</div>
       <% @lesson.steps.order(:step_number).each do |step| %>
-        <div class="">
-          <%= link_to "#{step.title}", step_path(step), class: 'btn btn-primary', remote: true%>
-        </div>
+        <%= content_tag "div", class: "step-input", data: {title: step.title} do %>
+          <%= link_to "#{step.title}", step_path(step), remote: true %>
+        <% end %>
       <% end %>
-      <% if current_user.try(:admin?) %>
+    </div>
+    <% if current_user.try(:admin?) %>
       <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
-      <% end %>
-      <div id="step-results"></div>
-    </div>
-  
-    <div class="col-md-9">
-      <%= render '/shared/editor' %>
-    </div>
+    <% end %>
+    <div id="step-results"></div>
+  </div>
+
+  <div class="col-md-9">
+    <%= render '/shared/editor' %>
   </div>
 </div>

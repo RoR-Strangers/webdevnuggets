@@ -1,0 +1,52 @@
+.step-dropdown {
+  position: relative;
+  div {
+    line-height: 60px;
+    padding-left: 20px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.step-input {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  &:hover {
+    background: #2481DC !important;
+  }
+  &.active {
+    background: #00b359;
+  }
+  a {
+    text-decoration: none;
+    color: #262626;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.step-preview {
+  height: 60px;
+  &:before {
+      position: absolute;
+      top: 22px;
+      right: 100px;
+      content:"";
+      width: 20px;
+      background: #262626;
+      -webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
+      clip-path: polygon(50% 73%, 0 0, 100% 0);
+      padding: 10px;
+      transition: .3s all ease;
+  }
+  &.active:before {
+    -webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
+    clip-path: polygon(50% 0, 0 73%, 100% 73%);
+  }
+}

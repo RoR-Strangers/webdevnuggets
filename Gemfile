@@ -28,6 +28,7 @@ gem 'rubocop', require: false
 gem 'ace-rails-ap'
 gem 'devise'
 gem 'jquery-ui-rails'
+gem 'greensock-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

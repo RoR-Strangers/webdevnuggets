@@ -20,5 +20,8 @@
 //= require ace/mode-css
 //= require ace/mode-html
 //= require update_preview
+//= require step_dropdown
 //= require jquery-ui/resizable
 //= require jquery-ui/draggable
+//= require greensock/TweenMax
+//= require greensock/plugins/TextPlugin
