@@ -1,6 +1,9 @@
 /*global $*/
 /*global ace*/
-$(document).ready(function() {
+$(document).ready(setup_solution);
+$(document).on('page:load', setup_solution); 
+
+function setup_solution() {
   document.getElementById("solution").addEventListener("click", show_solution);
 
   function show_solution() {
@@ -17,4 +20,4 @@ $(document).ready(function() {
     editor.setValue("");
     editor.insert(content);
   }
-});
+}
