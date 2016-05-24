@@ -9,6 +9,10 @@ body, html {
   background-color: #F1F1F1;
 }
 
+.editor-body {
+  overflow: hidden;
+}
+
 .modal-body {
   margin: 0;
   padding-top: 0;
@@ -282,6 +286,13 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
 .lessons-container {
   margin-top: 75px;
   
+}
+
+.container-editor {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    
 }
 
 .title-header {

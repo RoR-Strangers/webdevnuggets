@@ -16,15 +16,16 @@
   <!-- end Render NAV -->
   
   <!--content-->
-  <div class="container-fluid">
+  <div class="container-fluid site-body">
     <div class="row">
       <%= render 'layouts/messages' %>
       <%= yield %>
-      </div>
+    </div>
   </div>
   
   <div class="container-fluid">
     <%= yield :index %>
+    <%= yield :editor %>
   </div>
   <!--end content-->
   
