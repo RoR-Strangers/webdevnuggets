@@ -30,6 +30,7 @@ gem 'devise'
 gem 'jquery-ui-rails'
 gem 'greensock-rails'
 gem 'redcarpet'
+gem 'pygments.rb'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
