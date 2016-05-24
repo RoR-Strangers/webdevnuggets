@@ -29,6 +29,7 @@ gem 'ace-rails-ap'
 gem 'devise'
 gem 'jquery-ui-rails'
 gem 'greensock-rails'
+gem 'redcarpet'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
