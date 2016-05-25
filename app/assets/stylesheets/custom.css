@@ -3,7 +3,6 @@ body, html {
   padding-top: 25px;
 }
 
-
 .site-body {
   overflow: hidden;
   background-color: #F1F1F1;
@@ -24,9 +23,13 @@ body, html {
   display: table;
 }
 
-#modalIframe {
+#resizable {
   width: 1280px;
   height: 720px;
+}
+
+#modalIframe {
+  height: 100%;
   border: none;
 }
 

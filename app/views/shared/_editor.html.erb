@@ -19,7 +19,7 @@
       <iframe id="targetCode"></iframe> 
     </div>
   </div>
-  <button type="button" id="loadModal" class="btn btn-primary btn-lg" 
+  <button class="btn btn-primary btn-lg" id="loadModal" 
           data-toggle="modal" data-target="#myModal">
     Open in Resizable Window
   </button>
@@ -32,8 +32,14 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-        <h4 class="modal-title">Resizable Preview</h4>
+        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title"> Resizable Preview</h4>
+        <button class="screen_selector" data-width="400px" data-height="500px">
+          Switch to Mobile
+        </button>
+        <button class="screen_selector" data-width="1280px" data-height="720px">
+          Switch to Desktop
+        </button>
       </div>
       <div class="modal-body">
         <div id="resizable">
@@ -43,4 +49,3 @@
     </div>
   </div>
 </div>
-

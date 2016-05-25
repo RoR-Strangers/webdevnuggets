@@ -4,7 +4,7 @@ $(document).ready(update_preview); // to load when going to page directly
 $(document).on('page:load', update_preview); // to load when coming from link_to
 
 function update_preview() {
-  var create_editor, update_output, input_content, update_modal, build_webpage;
+  var create_editor, update_output, input_content, build_webpage, select_screen;
   
   create_editor = function (format) {
     var editor = ace.edit(format);
@@ -47,17 +47,27 @@ function update_preview() {
   	return false;
   };
   
-  update_modal = function() {
+  $('#loadModal').click(function() {
     var modalIframe = document.getElementById('modalIframe');
     build_webpage(modalIframe);
-  };
+  });
     
-  document.getElementById("loadModal").addEventListener("click", update_modal);
+  $('.screen_selector').click(function() {
+    var targetWidth = $(this).data('width');
+    var targetHeight = $(this).data('height');
+    select_screen(targetWidth, targetHeight);
+  });
+  
+  select_screen = function(targetWidth, targetHeight) {
+    $('#resizable').animate({width: targetWidth});
+    $('#resizable').animate({height: targetHeight});
+    $('.modal-content').animate({width: targetWidth});
+    $('.modal-content').animate({height: targetHeight});
+  };
   
   $('.modal-content').resizable({
     alsoResize: "#resizable",
-    minHeight: 200,
-    minWidth: 200
+    minWidth: 400
     });
   $('.modal-dialog').draggable();
 }
