@@ -8,7 +8,7 @@
       <div class='step-dropdown'>
         <div class='step-preview'>Select a Step</div>
         <% @lesson.steps.order(:step_number).each do |step| %>
-          <%= content_tag "div", class: "step-input", data: {title: step.title} do %>
+          <%= content_tag "div", class: "step-input", id: step.title.delete(' ') do %>
             <%= link_to "#{step.title}", step_path(step), remote: true %>
           <% end %>
         <% end %>

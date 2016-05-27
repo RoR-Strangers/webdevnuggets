@@ -35,12 +35,10 @@ function step_dropdown() {
   
   steps.click(function() {
     var timeline = new TimelineMax({
-    onComplete: done
     });
     
     var step = $(this),
-    siblings = step.siblings(steps),
-    data = step.data('title');
+    siblings = step.siblings(steps);
     
     siblings.removeClass("active");
     
@@ -51,7 +49,6 @@ function step_dropdown() {
       top: 0,
     })
     .set(step_preview, {
-      text: data,
       alpha: 1
     })
     .to(step, .25, {
@@ -61,8 +58,5 @@ function step_dropdown() {
       display: "none"
     })
     
-    function done() {
-    step.addClass("active");
-    }
   });
 }
