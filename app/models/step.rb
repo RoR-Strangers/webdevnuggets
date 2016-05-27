@@ -4,4 +4,8 @@ class Step < ActiveRecord::Base
   validates :lesson_id, presence: true
   validates :step_number, presence: true
   validates :instruction, presence: true
+  
+  def next
+    self.lesson.steps.where("step_number > ?", self.step_number).first
+  end
 end
