@@ -26,3 +26,4 @@
 //= require jquery-ui/draggable
 //= require greensock/TweenMax
 //= require greensock/plugins/TextPlugin
+//= require sweetalert
