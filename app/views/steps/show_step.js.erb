@@ -1,8 +1,7 @@
 $("#step-results").html("<%=escape_javascript(render 'show')%>");
 
 var title = $('#insert').data('title'),
-    dropdown_target = title.replace(/\s/g, ''),
-    step = document.querySelector("[id=" + dropdown_target + "]");
+    step = document.querySelector("[id=" + title + "]");
     
 $(".step-input").removeClass("active");
 step.classList.add("active");

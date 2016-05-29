@@ -4,7 +4,8 @@ $(document).ready(update_preview); // to load when going to page directly
 $(document).on('page:load', update_preview); // to load when coming from link_to
 
 function update_preview() {
-  var create_editor, update_output, input_content, build_webpage, select_screen;
+  var create_editor, update_output, input_content,
+      build_webpage, select_screen, load_function_previews;
   
   create_editor = function (format) {
     var editor = ace.edit(format);
@@ -16,6 +17,30 @@ function update_preview() {
     });
     return false;
   };
+  
+  load_function_previews = function() {
+    $('.lesson-preview').each(function() {
+      var title = $(this).data('title'),
+          html = $(this).data('html'),
+          css = $(this).data('css'),
+          javascript = $(this).data('javascript'),
+          iframe =  document.querySelector("[id=" + title + "]");
+        
+      iframe = iframe.contentWindow;
+      iframe.document.open();
+    	iframe.document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>');
+    	iframe.document.write(html);
+    	iframe.document.write("<style>");
+    	iframe.document.write(css);
+    	iframe.document.write("</style>");
+      iframe.document.write("<script>");
+    	iframe.document.write(javascript);
+      iframe.document.write("</script>");
+    	iframe.document.close();
+    });
+  };
+  
+  load_function_previews();
   
   create_editor("html");
   create_editor("css");
