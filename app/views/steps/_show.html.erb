@@ -6,7 +6,7 @@
 <%= content_tag "div", id: "insert", data: {html: @step.html,
                                             css: @step.css,
                                             javascript: @step.javascript,
-                                            title: @step.title.delete(' ')} do %>
+                                            title: @step.title} do %>
 <% end %>
 <% if !current_user.nil? and current_user.admin? %>
   <%= link_to "edit", edit_step_path(@step, :lesson_id => @step.lesson_id), 
