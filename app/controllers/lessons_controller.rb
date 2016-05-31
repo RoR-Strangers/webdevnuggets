@@ -36,6 +36,7 @@ class LessonsController < ApplicationController
   def show
     title = params[:title].tr('-', ' ')
     @lesson = Lesson.find_by_title(title)
+    @step = @lesson.steps.order(:step_number).first
   end
 
   def destroy

@@ -6,14 +6,16 @@
         <%= link_to "New Step", new_step_path(:lesson_id => @lesson.id)%>
       <% end %>
       <div class='step-dropdown'>
-        <div class='step-preview'>Select a Step</div>
+        <div class='step-preview'><%=@lesson.steps.order(:step_number).first.title%></div>
         <% @lesson.steps.order(:step_number).each do |step| %>
           <%= content_tag "div", class: "step-input", id: step.title.delete(' ') do %>
             <%= link_to "#{step.title}", step_path(step), remote: true %>
           <% end %>
         <% end %>
       </div>
-      <div id="step-results"></div>
+      <div id="step-results">
+        <%= render "/steps/show" %>
+      </div>
     </div>
   
     <div class="col-md-9">
