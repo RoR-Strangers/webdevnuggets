@@ -1,37 +1,3 @@
 <% content_for :index do %>
-  <div class="container">
-    
-    <div class="row">
-      <div class="header">
-        <h1>Lessons
-          <small>more coming soon!</small>
-        </h1>
-      </div>
-    </div>
-    
-    <% @lessons.each do |lesson| %>
-      <div class="row">
-        <div class="cards">
-          <h3>
-            <% title = lesson.title.tr(' ', '-') %>
-            <%= link_to lesson.title, lesson_path(title) %>
-          </h3>
-          <% if current_user.try(:admin?) %>
-            <%= link_to "edit", edit_lesson_path(lesson), class: "btn btn-xs btn-primary" %>
-            <%= link_to "delete", lesson_path(lesson), method: :delete,
-                                  data: { confirm: "Are you sure you want to delete?" },
-                                  class: "btn btn-xs btn-danger" %>
-          <% end %>
-        </div>
-        <% unless lesson.last_step.nil? %>
-          <%= content_tag "iframe", class: "lesson-preview", id: lesson.title.delete(' '),
-                                    data: {title: lesson.title.delete(' '),
-                                           html: lesson.last_step.html,
-                                           css: lesson.last_step.css,
-                                           javascript: lesson.last_step.javascript} do %>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+  <%= render "index" %>"
 <% end %>
