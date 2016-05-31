@@ -20,13 +20,13 @@ function step_dropdown() {
     });
   
     if(step_preview.hasClass('active')) {
-      TweenMax.staggerTo(steps, 0.75, {
+      TweenMax.staggerTo(steps, 0.25, {
         alpha: 1,
         display: 'block',
       }, .1);
     }
     else {
-      TweenMax.staggerTo(steps, 0.75, {
+      TweenMax.staggerTo(steps, 0.25, {
         alpha: 0,
         display: 'none',
       }, .1);
