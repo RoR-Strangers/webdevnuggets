@@ -1,38 +1,36 @@
 <div class="container">
   <%= render 'shared/errors', obj: @step %>
-  <div class="row">
-    <%= form_for(@step) do |f| %>
-      <div class="form-group">
-        <%= f.label :title %>
-        <%= f.text_field :title, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :lesson_id %>
-        <%= f.number_field :lesson_id, class: "form-control", :value => params[:lesson_id]%>
-      </div>
-      <div class="form-group">
-        <%= f.label :step_number %>
-        <%= f.number_field :step_number, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :instruction %>
-        <%= f.text_area :instruction, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :html %>
-        <%= f.text_area :html, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :css %>
-        <%= f.text_area :css, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :javascript %>
-        <%= f.text_area :javascript, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.submit class: 'btn btn-primary' %>
-      </div>
-    <% end %>
-  </div>
+  <%= form_for(@step) do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :lesson_id %>
+      <%= f.number_field :lesson_id, class: "form-control", :value => params[:lesson_id]%>
+    </div>
+    <div class="form-group">
+      <%= f.label :step_number %>
+      <%= f.number_field :step_number, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :instruction %>
+      <%= f.text_area :instruction, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :html %>
+      <%= f.text_area :html, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :css %>
+      <%= f.text_area :css, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :javascript %>
+      <%= f.text_area :javascript, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 </div>
