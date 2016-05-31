@@ -17,11 +17,11 @@ function setup_solution() {
   function show_solution() {
     swal({
         title: "Are you sure?",
-        text: "You might feel like a cheater if you do!",
+        text: "Your code will be replaced",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: '#DD6B55',
-        confirmButtonText: 'Yes, cheat!',
+        confirmButtonText: 'Yes, replace!',
         cancelButtonText: "No, I want to figure it out!",
         closeOnConfirm: false,
         closeOnCancel: false
