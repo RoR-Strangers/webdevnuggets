@@ -1,31 +1,32 @@
-<div class="container-fluid">
-  <div class="row editor-row">
-    <div class="col-md-4">
-      <span class="label label-default col-lg-12 fancy-bar">HTML</span>
-      <div class="editor" id="html"></div>
-    </div>
-    <div class="col-md-4">
-      <span class="label label-default col-lg-12 fancy-bar">CSS</span>
-      <div class="editor" id="css"></div>
-    </div>
-    <div class="col-md-4">
-      <span class="label label-default col-lg-12 fancy-bar">Javascript</span>
-      <div class="editor" id="javascript"></div>
-    </div>
-  </div>
-  
-  <div class="row view-row">
-    <div class="col-md-12">
-      <iframe id="targetCode"></iframe> 
-    </div>
-  </div>
+<div class="col-xs-12 text-center">
   <button class="btn btn-primary btn-lg" id="loadModal" 
           data-toggle="modal" data-target="#myModal">
-    Open in Resizable Window
+  Open in Resizable Window
   </button>
   <button class="btn btn-warning btn-lg" id="solution">
     Show Solution
   </button>
+</div>
+
+<div class="row editor-row">
+  <div class="col-md-4">
+    <span class="label label-default col-lg-12 fancy-bar">HTML</span>
+    <div class="editor" id="html"></div>
+  </div>
+  <div class="col-md-4">
+    <span class="label label-default col-lg-12 fancy-bar">CSS</span>
+    <div class="editor" id="css"></div>
+  </div>
+  <div class="col-md-4">
+    <span class="label label-default col-lg-12 fancy-bar">Javascript</span>
+    <div class="editor" id="javascript"></div>
+  </div>
+</div>
+
+<div class="row view-row">
+  <div class="col-md-12">
+    <iframe id="targetCode"></iframe> 
+  </div>
 </div>
 
 <div class="modal fade" id="myModal">
