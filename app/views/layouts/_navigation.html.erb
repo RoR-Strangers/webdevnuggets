@@ -6,8 +6,13 @@
   <div class="link-container">
     <ul>
       <li>
+        <%= link_to '/about' do %>
+        <i class="fa fa-exclamation-circle"></i> About
+        <% end %>
+      </li>
+      <li>
         <%= link_to lessons_path do %>
-        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Go to Lessons
+        <i class="fa fa-graduation-cap"></i> Go to Lessons
         <% end %>
       </li>
     </ul>

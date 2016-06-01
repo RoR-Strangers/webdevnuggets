@@ -18,14 +18,16 @@ $link-hover-color: #ffe6d1;
   ul {
     margin: 0;
     padding: 0;
-    a {
+    li {
       float: left;
-      padding: 0 20px;
-      line-height: $nav-height;
-      color: $nav-font-color;
-      text-decoration: none;
-      &:hover {
-        color: $link-hover-color;
+      a {
+        padding: 0 20px;
+        line-height: $nav-height;
+        color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          color: $link-hover-color;
+        }
       }
     }
   }
