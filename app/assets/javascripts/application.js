@@ -19,6 +19,7 @@
 //= require ace/mode-javascript
 //= require ace/mode-css
 //= require ace/mode-html
+//= require navbar
 //= require update_preview
 //= require step_dropdown
 //= require show_solution

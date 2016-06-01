@@ -2,6 +2,8 @@ $nav-height: 50px;
 $nav-background: #333333;
 $nav-font-color: #ecf0f1;
 $link-hover-color: #ffe6d1;
+$brand-font-color: #FF6200;
+$breakpoint: 800px;
 
 .navigation {
   height: $nav-height;
@@ -9,26 +11,84 @@ $link-hover-color: #ffe6d1;
   position: fixed;
   width: 100%;
   z-index: 1;
+  a:hover {
+    color: $link-hover-color;
+  }
   .navbar-brand {
-    color: #FF6200;
-    &:hover {
-      color: $link-hover-color;
-    }
+    color: $brand-font-color;
   }
   ul {
     margin: 0;
     padding: 0;
     li {
       float: left;
+      line-height: $nav-height;
       a {
         padding: 0 20px;
-        line-height: $nav-height;
         color: $nav-font-color;
         text-decoration: none;
-        &:hover {
-          color: $link-hover-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .nav-toggle-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $nav-height;
+    #nav-toggle {
+      right: 15px;
+      top: 12px;
+      padding: 0px 35px 16px 0px;
+      cursor: pointer;
+      span, span:before, span:after {
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: $nav-font-color;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+      }
+      span:before {
+        top: -10px;
+      }
+      span:after {
+        bottom: -10px;
+      }
+      &.active span {
+        background-color: transparent;
+        &:before,
+        &:after {
+        top: 0;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
         }
       }
     }
   }
+  
+  .link-container {
+    padding-top: $nav-height;
+    ul {
+      display: none;
+      li {
+        width: 100%;
+        background-color: $nav-background;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  ul {
+    display: block !important;
+  } 
 }
