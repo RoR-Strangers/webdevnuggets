@@ -1,28 +1,19 @@
-== README
+== WEB DEV NUGGETS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website is meant for anyone who has learnt the basics of html, css, and javascript
+and are looking for ways to improve upon their skills and build practical features to 
+implement in their own websites.
 
-Things you may want to cover:
+Features of this website
 
-* Ruby version
+* Live preview of html, css, and javascript compiled into an iframe
 
-* System dependencies
+* Resizable modal to see the preview at all resolutions
 
-* Configuration
+* Steps cycle through with ajax, not interrupting your code
 
-* Database creation
+* Show solution button to input code up to the end of the current step
 
-* Database initialization
+* Live preview for the final product under each lesson link
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Does not work with internet explorer
