@@ -7,7 +7,9 @@
       <% end %>
       <div class='step-dropdown'>
         <div class='step-preview'>
-          <%= @lesson.steps.order(:step_number).first.title %>
+          <% unless @lesson.last_step.nil? %>
+            <%= @lesson.steps.order(:step_number).first.title %>
+          <% end %>
         </div>
         <% @lesson.steps.order(:step_number).each do |step| %>
           <%= content_tag "div", class: "step-input", id: step.title.delete(' ') do %>
@@ -16,7 +18,9 @@
         <% end %>
       </div>
       <div id="step-results">
-        <%= render "/steps/show" %>
+        <% unless @lesson.last_step.nil? %>
+          <%= render "/steps/show" %>
+        <% end %>
       </div>
     </div>
   
