@@ -34,19 +34,18 @@
 .step-preview {
   height: 60px;
   &:before {
-      position: absolute;
-      top: 22px;
-      right: 0;
-      content:"";
-      width: 20px;
-      background: #262626;
-      -webkit-clip-path: polygon(50% 73%, 0 0, 100% 0);
-      clip-path: polygon(50% 73%, 0 0, 100% 0);
-      padding: 10px;
-      transition: .3s all ease;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    content:"";
+    width: 0;
+  	border-left: 10px solid transparent;
+  	border-right: 10px solid transparent;
+  	border-top: 20px solid;
+    transition: .3s all ease;
   }
   &.active:before {
-    -webkit-clip-path: polygon(50% 0, 0 73%, 100% 73%);
-    clip-path: polygon(50% 0, 0 73%, 100% 73%);
+    border-top: 0px;
+    border-bottom: 20px solid;
   }
 }
